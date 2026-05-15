@@ -69,3 +69,91 @@
 .markdown-body {
   @apply text-charcoal leading-relaxed;
 }
+
+/* Responsive Scaling Overrides */
+/* Tablet: 1024px and below */
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  /* Scale down massive headings slightly earlier */
+  .text-8xl { font-size: 6rem !important; }
+  .text-7xl { font-size: 5rem !important; }
+  .text-6xl { font-size: 4rem !important; }
+}
+
+/* Mobile: 768px and below */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  /* Global section padding reduction */
+  .py-32 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  /* Heading scale-down for mobile comfort */
+  .text-8xl, .text-7xl, .text-6xl {
+    font-size: 3.125rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .text-5xl { font-size: 2.5rem !important; }
+  .text-4xl { font-size: 2rem !important; }
+  .text-3xl { font-size: 1.75rem !important; }
+
+  /* Spacing and Gap reduction */
+  .gap-20 { gap: 2.5rem !important; }
+  .gap-10 { gap: 1.25rem !important; }
+  .mb-20 { margin-bottom: 3.5rem !important; }
+  .mb-8 { margin-bottom: 1.25rem !important; }
+  .space-y-8 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse))) !important; }
+
+  /* Rounded corners feel too large on mobile */
+  .rounded-\[50px\] { border-radius: 28px !important; }
+  .rounded-\[32px\] { border-radius: 20px !important; }
+
+  /* Button and input scaling */
+  .px-8.py-4, .px-6.py-3 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  
+  /* Navbar specific mobile scaling */
+  .h-16.md\:h-20 { height: 3.5rem !important; }
+  .w-full.py-6.bg-cyan { 
+    padding-top: 1rem !important; 
+    padding-bottom: 1rem !important; 
+    font-size: 1.125rem !important;
+    border-radius: 12px !important;
+  }
+
+  /* Icon and decorative element scaling */
+  .w-12.h-1 { width: 1.5rem !important; }
+}
+
+/* Small Device: 390px and below */
+@media (max-width: 390px) {
+  html {
+    font-size: 13.5px;
+  }
+
+  .text-8xl, .text-7xl, .text-6xl {
+    font-size: 2.75rem !important;
+  }
+
+  .py-32 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
